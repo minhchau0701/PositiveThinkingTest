@@ -17,9 +17,10 @@ public class SignInSteps {
         textContext = context;
         signin = textContext.getPageObjectManager().getSignInPage();
     }
-    @When("User enters credentials to SignIn")
-    public void userEntersCredentialsToSignIn(DataTable usercredentials) {
 
+    @When("User enters credentials to SignIn and the system displays the invalid error message")
+    public void userEntersCredentialsToSignInAndTheSystemDisplaysTheInvalidErrorMessage( DataTable userTable) throws IOException {
+        signin.enterInformation(userTable);
     }
 
     @And("User clicks SignIn button on the SignIn page")

@@ -8,7 +8,7 @@ import pageObjects.SignIn;
 import pageObjects.SignUp;
 
 public class PageObjectManager {
-	private WebDriver driver;
+	private final WebDriver driver;
 	private EnvConfig env;
 	private SignUp signup;
 	private HomePage homepage;

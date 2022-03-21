@@ -7,7 +7,6 @@ Feature: User signup to the system
 
     Scenario: User signin with an invalid information
         Given User clicks "SIGNIN" button on Header menu
-        When User enters credentials to SignIn
-            | chaungo@gmail.com | abc |
-        And User clicks SignIn button on the SignIn page
-        Then The system displays the invalid error message and can not access to home page
+        When User enters credentials to SignIn and the system displays the invalid error message
+            | Email             | Password | ErrorMessage                 |
+            | chaungo@gmail.com | abc      | email or password is invalid |
