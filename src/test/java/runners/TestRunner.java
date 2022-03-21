@@ -10,7 +10,7 @@ import io.cucumber.junit.CucumberOptions;
 		// -----------------------
 		monochrome = true
 		//,strict = false
-		,plugin = {"pretty", "json:target/cucumber-reports/json-report.json"}
+		,plugin = {"pretty", "html:target/cucumber-reports/reports.html"}
         ,features = {"src/test/resources/functionalTests"}
 		,glue={"stepDefinitions"}
 		//,dryRun = true
